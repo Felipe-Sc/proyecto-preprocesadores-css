@@ -1,0 +1,109 @@
+//Variables
+$Fuente1: 'Lato', sans-serif;
+$Fuente2: 'Oswald', sans-serif;
+$color-primario: #333333;
+$color-claro:#ffffff;
+$color-secundario: #8841da;
+$color-variacion: #3f579a;
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?bxnsu8');
+  src:  url('../fonts/icomoon.eot?bxnsu8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?bxnsu8') format('truetype'),
+    url('../fonts/icomoon.woff?bxnsu8') format('woff'),
+    url('../fonts/icomoon.svg?bxnsu8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e905";
+}
+
+
+//Mixins
+@mixin caja {
+  border-radius: 20px;
+  box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, .50);
+  color: $color-primario;
+  background-color: $color-claro;
+}
+
+@mixin titulos($fuente) {
+  @if $fuente==$Fuente2 {
+    font-family: $Fuente2;
+    text-transform: uppercase;
+  } @else {
+    font-family: $Fuente1;
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  line-height: calculateRem($size)*1.5;
+}
+
+//Funciones
+@function get-opacity($color, $nivel) {
+  @return rgba($color, $nivel);
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+    font-size: $size;
+    @include titulos($Fuente2);
+    margin: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f9fafc;
+  color: $color-primario;
+  @include titulos($Fuente1);
+  @include font-size(18px);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  @include media(desktop-s) {
+    height: 100vh;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: inherit;
+  display: inherit;
+  flex: 1;
+  flex-wrap: inherit;
+  justify-content: inherit;
+}
