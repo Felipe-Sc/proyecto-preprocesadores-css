@@ -13,17 +13,19 @@
     <body></body>
   </html>
   <body>
-    <header class="header--principal">
-      <div class="logo logo--header"><img src="../images/logo--header.svg"></div><i class="icon-menu"></i>
-      <nav class="nav--header">
-        <ul>
-          <li><a href="#">Play Station</a></li>
-          <li><a href="#">Xbox</a></li>
-          <li><a href="#">Nintendo</a></li>
-          <li><a href="#">PC</a></li>
-          <li><a href="#">Mobile</a></li>
-        </ul>
-      </nav><a class="header__busqueda" href="#"><i class="fas fa-search"></i><span>Search</span></a>
+    <header class="header--principal"><i class="icon-menu"></i>
+      <div><a class="logo logo--header" href="pagina-principal.html"><img src="../images/logo--header.svg"></a>
+        <nav class="nav--header">
+          <ul>
+            <li><a href="#">Play Station</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Nintendo</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div><a class="header__perfil" href="perfil.html"><i class="fas fa-user-alt"></i></a><a class="header__busqueda" href="resultados-busqueda.html"><i class="fas fa-search"></i><span>Search</span></a></div>
     </header>
     <main>
       <section class="perfil"><img class="perfil__avatar" src="../images/avatar.jpg">
@@ -45,8 +47,10 @@
           <h3>Asesino a sueldo retirado y amante de perros</h3>
         </div>
         <div class="ubicacion--perfil"><i class="fas fa-map-marker-alt"></i>
-          <h2>Estados Unidos</h2>
-          <h3>227km Cerca</h3>
+          <div>
+            <h2>Estados Unidos</h2>
+            <h3>227km Cerca</h3>
+          </div>
         </div>
         <div class="galeria">
           <h2>Mis Fotos</h2>
@@ -73,23 +77,25 @@
     </main>
     <footer class="footer--principal">
       <div class="logo logo--footer"><img src="../images/logo--footer.svg"></div>
-      <nav class="nav--footer">
-        <ul>
-          <li><a href="#">Playstation</a></li>
-          <li><a href="#">Xbox</a></li>
-          <li><a href="#">Nintendo</a></li>
-          <li><a href="#">PC</a></li>
-          <li><a href="#">Mobile</a></li>
-        </ul>
-      </nav>
-      <div class="nav--social">
-        <ul>
-          <li>Siguenos</li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        </ul>
+      <div class="navContainer">
+        <nav class="nav--footer">
+          <ul>
+            <li><a href="#">Playstation</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Nintendo</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </nav>
+        <div class="nav--social">
+          <ul>
+            <li>Síguenos</li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
