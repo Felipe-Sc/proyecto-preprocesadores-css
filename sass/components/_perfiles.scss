@@ -1,8 +1,13 @@
 .perfil {
-  width: 45%;
+  width: auto;
   padding-top: 50px;
+  margin-top: 90px;
   color: $color-secundario;
   background-color: $color-claro;
+  @include media (desktop-s) {
+    width: 45%;
+    margin-top: 0;
+  }
   &__avatar {
     display: block;
     margin: 0 auto;

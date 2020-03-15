@@ -92,9 +92,10 @@ body {
 }
 
 main {
-  display: flex;
+  display: block;
   width: 100%;
   @include media(desktop-s) {
+    display: flex;
     height: 100vh;
   }
 }

@@ -1,43 +1,51 @@
 .intro {
-	width: 1340px;
-	height: 650px;
+  max-width: 1340px;
+  height: auto;
 	padding: 10px;
-	margin: 0 auto;
-	position: relative;
-	@include caja;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 90px;
+  @include caja;
+  @include media (desktop-s) {
+    margin-top: 0;
+  }
 	&__imagen {
-		width: 1320px;
-		position: absolute;
+		width: 100%;
 		img {
 			width: 100%;
-			height: 624px;
 			object-fit: cover;
 		}
 	}
 	&__contenido {
-		width: 50%;
+		width: 60%;
 		margin: 0 auto;
 		position: absolute;
-		top: 156px;
+		top: 20%;
 		left: 0;
 		right: 0;
 		text-align: center;
-		color: $color-claro;
+    color: $color-claro;
+    @include media (desktop-s){
+      width: 60%;
+    }
 	}
 	&__categoria{
 		color: get-opacity($color-claro, .50);
 		@include titulos($Fuente2);
 	}
 	&__titulo {
-    font-size: 50px;
+    @include font-size(30px);
     @include titulos($Fuente2);
+    @include media(desktop-s) {
+      @include font-size(50px);
+    }
 	}
 
 	&__autor {
 		width: 150px;
 		margin: 0 auto;
 		position: absolute;
-		top: 400px;
+		top: 70%;
 		left: 0;
 		right: 0;
 		color: $color-claro;
