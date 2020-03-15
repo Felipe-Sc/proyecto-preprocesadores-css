@@ -2,11 +2,31 @@ mixin stats(valor,leyenda)
 	.estadistica_elemento
 		h3=valor
 		span=leyenda
+
 mixin article(categoria,titulo, descripcion)
 	.articulo
 		span.articulo__categoria=categoria
 		h2.articulo__titulo=titulo
 		p.articulo__descripcion=descripcion
+
+mixin caja-video(imagen, category, title, summary)
+	.caja
+		a(href="#",class="caja__imagen"): img(src="../images/"+imagen)
+		.caja__contenido
+			span.caja__categoria=category
+			h3=title
+			p=summary
+		+estadistica
+
+mixin caja-noticia(category, title, summary)
+	.caja
+		a(href="#")
+		.caja__contenido
+			span.caja__categoria #{category}
+			h3 #{title}
+			p #{summary}
+		+estadistica
+
 mixin caja(imagen, categoria, titulo, contenido)
 	.caja
 		.caja__imagen: img(src="../images/"+imagen)
